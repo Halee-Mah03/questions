@@ -1,16 +1,14 @@
-function twoSum(numbers, target) {
-  const map = new Map();
-  for (const i = 0; i < numbers.length; i++) {
-    const complement = target - numbers[i];
-    if (map.has(complement)) {
-      return [map.get(complement), i];
+var twoSum = function (nums, target) {
+  for (let i = 0; i < nums.length; i++) {
+    for (let k = 0; k < nums.length; k++) {
+      if (nums[i] + nums[k] == target) {
+        return [i, k];
+      }
     }
-    map.set(numbers[i], i);
   }
   return [];
-}
-
-const numbers = [2, 5, 89];
-const target = 94;
-const result = twoSum(numbers, target);
+};
+const nums = [11, 15, 2, 7];
+const target = 9;
+const result = twoSum(nums, target);
 console.log(result);
