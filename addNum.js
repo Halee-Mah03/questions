@@ -11,15 +11,14 @@
  * @return {ListNode}
  */
 var addTwoNumbers = function (l1, l2) {
-  const array = [];
+  const result = new Array(l1.length);
 
   for (let i = 0; i < l1.length; i++) {
-    if (l1[i] + l2[i] == i);
+    result[i] = l1[i] + l2[i];
   }
-  return array;
+  return result;
 };
 
-const l1 = [1, 2, 3, 7];
-const l2 = [4, 5, 6, 10];
-const result = addTwoNumbers(l1, l2);
-console.log(result);
+const l1 = [1, 2, 3, 4];
+const l2 = [5, 6, 7, 8];
+console.log(addTwoNumbers(l1, l2));
